@@ -25,6 +25,28 @@
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 <script src="assets/js/sweetalert2.all.min.js"></script>
 <style>
+    .logo4 {
+text-align: center;
+margin: 20px auto;
+color:#000;
+background-color: #FFF; 
+padding: 10px;
+position: relative;
+border-radius: 7px;
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+font-size: 1rem !important;
+font-weight: bold;
+-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.logo4 {width: 98%;
+}
+
+
+
 			.swal2-styled {
 				margin: .3125em;
     			padding: 0em 77px;
@@ -70,10 +92,87 @@ input[type="checkbox"] + label, input[type="radio"] + label {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+
+/*-------------------------------*/
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkslategray;
+
+
+}
+
+.btn-send{
+    border: 0;
+    background: white;
+    border-radius: 50px;
+    padding: 10px 60px;
+    cursor: pointer;
+
+}
+.card{
+    background: rgb(255, 253, 161);
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px black;
+    padding: 1em;
+    position: absolute;
+    top:-100%;
+    left: 50%;
+    text-align: center;
+    width: 90%;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+    opacity: 0;
+}
+
+.card.open{
+    opacity: 1;
+    top: 280%;
+    transition-property: top;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card.close{
+    opacity: 0;
+    top: -50%;
+    
+}
+.card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-top: -50px;
+
+}
+
+.card h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.card .btn-close{
+width: 100%;
+border-radius: 50px;
+border: 0px;
+padding: 15px;
+margin-top: 20px;
+background: aquamarine;
+color: white;
+cursor: pointer;
+
+}
+
+
 		</style>
 </head>
 <body class="is-preload">
-
+<div style="text-align: center;margin-top: 20px;"><img style="border-radius: 20px;height: 200px;width: 400px;border: 0px;box-shadow: 1px 1px 1px 1px black;" src="https://getlogovector.com/wp-content/uploads/2019/08/kingdom-of-saudi-arabia-vision-2030-logo-vector.png" alt="">
+</div>
 <div id="wrapper">
 
 <header id="header" class="alt">
@@ -88,11 +187,20 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 
 
         <section class="main special">
-            <header class="major">
+               
+           
+               <!-- <center><marquee scrollamount="5" direction="right" ><b style="background: white;padding: 10px;color: red;font-size: 20px;border: solid black 1px;border-radius: 20px;font-weight: bold;">
+                   [ موقع فوريو يقدم لكم ايضا شرح المقررات التالية  [  التفاضل والتكامل 1 و 2   + مقدمة في الرياضيات  + جبر خطي + معادلات تفاضلية + نظرية مجموعات + تحليل عددي + رياضيات متقطعة + الفيزياء 
+                <b></marquee> <br>
+                </center>-->
+            
+                
+           <!-- <marquee  style="background: white;padding: 10px;color: red;font-size: 20px;border: solid black 1px;border-radius: 20px;font-weight: bold;">الاشس علاعسشي هعغلشعسي سي شسبيثصهخع يسبهتعهسيب بيثخهثب ثبثبهخ </marquee>
+        --><header class="major">
             <h2>شرح تجريبي</h2>
             </header>
-            <iframe width="560" height="315" style="max-width:94%;" src="https://www.youtube.com/embed/-YM1YTcetJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><hr>
-		<ul class="list">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AaFgP7kwsXU" style="max-width:94%;" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><hr>
+            <ul class="list">
                 <summary>يتضمن هذا الموقع </summary><hr>
                 
                 <li style="padding:10px;">شرح المقرر بالكامل &#x2713;</li>
@@ -104,7 +212,18 @@ input[type="checkbox"] + label, input[type="radio"] + label {
             </ul><hr>
             <p class="price" style="padding:10px;">سعر الإشتراك شامل كل شروحات المقرر مع الواجبات ب <span>(   200 ريال) <br> بدلا من<del style="color: red;"> 250 ريال  </del> </span> <br>ويمديك تدفع اي وقت  (الآن او وقت المكافأة ) </p>
 
-            							
+            <hr>
+            <header class="major">
+                <h2> كما يقدم لكم موقع فوريو ايضا شروحات للمقررات التالية <br> <i class="fa fa-arrow-circle-down" style="font-size:48px;color:red"></i></h2>
+                </header>
+                <div align="center"  class="logo4">
+                <font color="#D4002E"><marquee scrollamount="3" direction="right" bgcolor="#FFFFFF">
+                    <b style="color:
+                    red;font-weight: bold;">       التفاضل والتكامل 1 و 2   + مقدمة في الرياضيات  + جبر خطي + معادلات تفاضلية <hr style="color: red;">+ نظرية مجموعات + تحليل عددي + رياضيات متقطعة + الفيزياء  + التصميم المنطقي الرقمي.......................
+                    </b></marquee> <br>
+            
+                </font>
+                </div>							
             </section>
         </section></div><br><hr><br>
 <div id="main">       
@@ -118,23 +237,32 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 <header class="major">
 <h2>تسجيل الدخول</h2>
 </header>
-<span  >للحصول على الخصم قم بنسخ هذا الكود (<strong style="color:
-red;font-size: 30px;"> Zforyou </strong>) وارساله لنا عبر الضغط على طلب اشتراك  جديد</span><br><br><br>
-<form method="post" action="#">
+<br><br>
 
 
 
 
 
 
-<div class="col-12">
+
+<div class="col-12 ">
 
 
-<li style="display: block;width: 88%;margin: auto;" ><a href="https://wa.me/qr/6YQT2SXQYVV6O1" target="_blank" class="button primary fit " style="display: block;width: 90%;">طلب اشتراك جديد</a></li>
-
+<!--<li style="display: block;width: 88%;margin: auto;" onclick="show_pup()" ><a href="#"  target="_blank" class="button primary fit " style="display: block;width: 90%;">طلب اشتراك جديد</a></li>
+-->
+<button style="display: block;margin: auto;width: 90%;font-weight: bold;font-size: 20px;" class="button primary fit "  onclick="show_pup()"> طلب اشتراك جديد</button>
+<div class="card" id="pup">
+    <img src="https://icon-library.com/images/emoji-icon-png/emoji-icon-png-1.jpg" alt="">
+    <h2>هلا والله</h2>
+    <p><span  >للحصول على الخصم قم بنسخ هذا الكود (<strong style="color:
+        red;font-size: 30px;"> Zforyou </strong>) وارساله لنا عبر الضغط على إشتراك   </span></p>
+    <!--<button class="btn-close">إرسال </button>-->
+    <a href="https://wa.me/qr/6YQT2SXQYVV6O1" style="display: block;margin: auto;width: 90%;background: #431f8d;color: white;padding:10px;border-radius: 20px;font-weight: bold;">إشتراك</a><br>
+    <button style="display: block;margin: auto;width: 90%;background: #431f8d;color: white;padding:10px;border-radius: 20px;font-weight: bold;text-align: center;" class="button primary fit "  onclick="hiad_pup()"> إالغاء  </button>
 </div>
 </div>
-</form>
+</div>
+
 </section>
 
 </section>
@@ -143,15 +271,30 @@ red;font-size: 30px;"> Zforyou </strong>) وارساله لنا عبر الضغ�
 <footer id="footer">
 <ul class="icons copyright">
 <li><a href="https://wa.me/qr/6YQT2SXQYVV6O1" class="icon brands fa-whatsapp alt"><span class="label">whatsapp</span></a></li>
-<li><a href="https://t.me/bmonaw" class="icon brands fa-telegram alt"><span class="label">telegram</span></a></li>
+<li><a href="t.me/bmonaw" class="icon brands fa-telegram alt"><span class="label">telegram</span></a></li>
 
 </ul><br>
-	<li class="copyright"><a href="../index.html"  style="font-size:20px;color:yellow;margin: auto;" >موقع خاص لشرح مادة التصميم المنطقي الرقمي</a></li>
+<li class="copyright"><a href="../index.html"  style="font-size:20px;color:yellow;margin: auto;" >موقع خاص لشرح مادة التصميم المنطقي الرقمي</a></li>
 
 <li class="copyright">&copy;  جميع الحقوق محفوظة ل<a  href="https://wa.me/qr/23PJHZ6DTHWRP1" style="text-decoration: none;"> ALZEEKA</a></li>
 										
 </footer>
 </div>
+<script>
+    function show_pup(){
+        document.getElementById('pup').classList.add('open');
+        document.getElementById('pup').classList.remove('close');
+
+
+    }
+
+    function hiad_pup(){
+        document.getElementById('pup').classList.add('close');
+        document.getElementById('pup').classList.remove('open');
+
+
+    }
+</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
