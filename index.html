@@ -70,10 +70,85 @@ input[type="checkbox"] + label, input[type="radio"] + label {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+	
+	
+	.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkslategray;
+
+
+}
+
+.btn-send{
+    border: 0;
+    background: white;
+    border-radius: 50px;
+    padding: 10px 60px;
+    cursor: pointer;
+
+}
+.card{
+    background: rgb(255, 253, 161);
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px black;
+    padding: 1em;
+    position: absolute;
+    top:-100%;
+    left: 50%;
+    text-align: center;
+    width: 90%;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+    opacity: 0;
+}
+
+.card.open{
+    opacity: 1;
+    top: 280%;
+    transition-property: top;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card.close{
+    opacity: 0;
+    top: -50%;
+    
+}
+.card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-top: -50px;
+
+}
+
+.card h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.card .btn-close{
+width: 100%;
+border-radius: 50px;
+border: 0px;
+padding: 15px;
+margin-top: 20px;
+background: aquamarine;
+color: white;
+cursor: pointer;
+
+}
+
 		</style>
 </head>
 <body class="is-preload">
-
+<div style="text-align: center;margin-top: 20px;"><img style="border-radius: 20px;height: 200px;width: 400px;border: 0px;box-shadow: 1px 1px 1px 1px black;" src="https://getlogovector.com/wp-content/uploads/2019/08/kingdom-of-saudi-arabia-vision-2030-logo-vector.png" alt="">
+</div>
 <div id="wrapper">
 
 <header id="header" class="alt">
@@ -103,7 +178,18 @@ input[type="checkbox"] + label, input[type="radio"] + label {
                 <li></li>
             </ul><hr>
             <p class="price" style="padding:10px;">سعر الإشتراك شامل كل شروحات المقرر مع الواجبات ب <span>(   299 ريال) <br> بدلا من<del style="color: red;"> 350 ريال  </del> </span> <br>ويمديك تدفع اي وقت  (الآن او وقت المكافأة ) </p>
-
+		 <hr>
+            <header class="major">
+                <h2> كما يقدم لكم موقع فوريو ايضا شروحات للمقررات التالية <br> <i class="fa fa-arrow-circle-down" style="font-size:48px;color:red"></i></h2>
+                </header>
+                <div align="center"  class="logo4">
+                <font color="#D4002E"><marquee scrollamount="3" direction="right" bgcolor="#FFFFFF">
+                    <b style="color:
+                    red;font-weight: bold;">       التفاضل والتكامل 1 و 2   + مقدمة في الرياضيات  + جبر خطي + معادلات تفاضلية <hr style="color: red;">+ نظرية مجموعات + تحليل عددي + رياضيات متقطعة  الفيزياء  +   .......................
+                    </b></marquee> <br>
+            
+                </font>
+                </div>
             							
             </section>
         </section></div><br><hr><br>
@@ -120,7 +206,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 </header>
 <span  >للحصول على الخصم قم بنسخ هذا الكود (<strong style="color:
 red;font-size: 30px;"> foryouM </strong>) وارساله لنا عبر الضغط على طلب اشتراك  جديد</span><br><br><br>
-<form method="post" action="#">
+
 
 
 
@@ -130,11 +216,19 @@ red;font-size: 30px;"> foryouM </strong>) وارساله لنا عبر الضغ�
 <div class="col-12">
 
 
-<li style="display: block;width: 88%;margin: auto;" ><a href="https://wa.me/qr/23PJHZ6DTHWRP1" target="_blank" class="button primary fit " style="display: block;width: 90%;">طلب اشتراك جديد</a></li>
+<button style="display: block;margin: auto;width: 90%;font-weight: bold;font-size: 20px;" class="button primary fit "  onclick="show_pup()"> طلب اشتراك جديد</button>
+<div class="card" id="pup">
+    <img src="https://icon-library.com/images/emoji-icon-png/emoji-icon-png-1.jpg" alt="">
+    <h2>هلا والله</h2>
+    <p><span  >للحصول على الخصم قم بنسخ هذا الكود (<strong style="color:
+        red;font-size: 30px;"> Zforyou </strong>) وارساله لنا عبر الضغط على إشتراك   </span></p>
+    <!--<button class="btn-close">إرسال </button>-->
+    <a href="https://wa.me/qr/23PJHZ6DTHWRP1" style="display: block;margin: auto;width: 90%;background: #431f8d;color: white;padding:10px;border-radius: 20px;font-weight: bold;">إشتراك</a><br>
+    <button style="display: block;margin: auto;width: 90%;background: #431f8d;color: white;padding:10px;border-radius: 20px;font-weight: bold;text-align: center;" class="button primary fit "  onclick="hiad_pup()"> إالغاء  </button>
+</div>
+</div>
+</div>
 
-</div>
-</div>
-</form>
 </section>
 
 </section>
@@ -152,7 +246,21 @@ red;font-size: 30px;"> foryouM </strong>) وارساله لنا عبر الضغ�
 										
 </footer>
 </div>
+<script>
+    function show_pup(){
+        document.getElementById('pup').classList.add('open');
+        document.getElementById('pup').classList.remove('close');
 
+
+    }
+
+    function hiad_pup(){
+        document.getElementById('pup').classList.add('close');
+        document.getElementById('pup').classList.remove('open');
+
+
+    }
+</script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
